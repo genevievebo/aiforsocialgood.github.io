@@ -1,0 +1,14 @@
+{ 
+"default" :{
+  "conference_nick" : "ICLR2019", 
+  "conference_name" : "International Conference on Learning Representations", 
+  "conference_abbr" : "ICLR", 
+  "workshop_date": "May, 6th",
+  "deadline_date" : "to be announced",
+  "deadline_hour" : "", 
+  "notification_date" : "to be announced",
+  "cameraready_date" : "to be announced"
+
+  }
+ 
+}
