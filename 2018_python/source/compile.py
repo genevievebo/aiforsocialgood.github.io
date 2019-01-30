@@ -9,15 +9,16 @@ from mako.lookup import TemplateLookup
 
 reg = "\$\{[^$]*\}"
 
+mylookup = TemplateLookup(directories=['.'], strict_undefined=False, input_encoding='utf-8')
+
+# Load custom attributes from json file
 custom = json.loads(open('custom.json').read())
 
-mylookup = TemplateLookup(directories=['.'],strict_undefined=False, input_encoding='utf-8')
-
+# Get all sections
 sections = [s for s in os.listdir(".") if "compile" not in s and not s.startswith('.')]
 sections.remove("custom.json")
 sections.remove("header")
 sections.remove("footer")
-
 
 for section_name in sections :
 	attributes = custom['default'] 
@@ -27,19 +28,17 @@ for section_name in sections :
 	
 	section = Template(html, lookup=mylookup, strict_undefined=False)
 	
-	
 	try : 
 		s = section.render(**attributes)
 		outfile = open('../new/%s.html' % section_name, "w")
 		outfile.write(str(s))
 		outfile.close()
 
-
 	except Exception as e: 
 		print("Missing value")
 		print(section_name, re.findall(reg, open(section_name).read()))
-		print(section_name, re.findall(reg, open("footer").read()))
-		print(section_name, re.findall(reg, open("header").read()))
+		#print("footer", re.findall(reg, open("footer").read()))
+		#print("header", re.findall(reg, open("header").read()))
 
 
 
