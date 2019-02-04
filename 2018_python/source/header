@@ -18,7 +18,7 @@
 	<meta property="og:locale" content="en_US" />  
 
 
-    <title>AI for Social Good Workshop ${conference_nick}</title>
+    <title>${workshop_name} Workshop ${conference_nick}</title>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -63,7 +63,7 @@ function pageScript(tomatch){
     <div class="blog-masthead"  style="font-family: arial">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item" href="index.htm">AI for Social Good ${conference_nick} Workshop</a>
+          <a class="blog-nav-item" href="index.htm">${workshop_name} ${conference_nick} Workshop</a>
           <a class="blog-nav-item" href="cfp.htm">Call for Papers</a>
 			<span class="dropdown">
 			  <a class="blog-nav-item dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">
@@ -83,4 +83,5 @@ function pageScript(tomatch){
     </div>
 
     <div class="container">
+
     

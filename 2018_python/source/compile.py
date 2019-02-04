@@ -9,10 +9,11 @@ from mako.lookup import TemplateLookup
 
 reg = "\$\{[^$]*\}"
 
-mylookup = TemplateLookup(directories=['.'], strict_undefined=False, input_encoding='utf-8')
+mylookup = TemplateLookup(directories=['.', '../bio', '../abstract'], strict_undefined=False, input_encoding='utf-8')
 
 # Load custom attributes from json file
 custom = json.loads(open('custom.json').read())
+
 
 # Get all sections
 sections = [s for s in os.listdir(".") if "compile" not in s and not s.startswith('.')]
@@ -20,8 +21,9 @@ sections.remove("custom.json")
 sections.remove("header")
 sections.remove("footer")
 
+sections = ['schedule']
 for section_name in sections :
-	attributes = custom['default'] 
+	attributes = custom['default'].copy()
 	attributes.update(custom.get(section_name, {}))
 	
 	html = """<%include file="header"/> <%include file="{}"/>  <%include file="footer"/>""".format(section_name)
@@ -35,8 +37,14 @@ for section_name in sections :
 		outfile.close()
 
 	except Exception as e: 
-		print("Missing value")
-		print(section_name, re.findall(reg, open(section_name).read()))
+		print(e)
+		
+		ctc = re.findall(reg, open(section_name).read())
+		atr = attributes.keys()
+		for c in ctc: 
+			c = c.strip("${}")
+			if c not in atr:
+				print(section_name, " : ", c,  " is missing")
 		#print("footer", re.findall(reg, open("footer").read()))
 		#print("header", re.findall(reg, open("header").read()))
 

@@ -1,14 +1,84 @@
 { 
 "default" :{
+
+  "year" : "2019",
+  "workshop_date": "May 6th, 2019" ,
+  "workshop_day_litteral" : "6th",
+  "workshop_date_with_day" : "Monday May 6th",
+  "workshop_abbr" : "AISG",
+  "workshop_name" : "AI for Social Good",
+  "workshop_mailto" : "aisg2019.iclr.contact@gmail.com",
+  "github_link" : "https://aiforsocialgood.github.io/2018",
+
   "conference_nick" : "ICLR2019", 
   "conference_name" : "International Conference on Learning Representations", 
   "conference_abbr" : "ICLR", 
-  "workshop_date": "May, 6th",
+  "conference_website" : "https://iclr.cc",
   "deadline_date" : "to be announced",
   "deadline_hour" : "", 
   "notification_date" : "to be announced",
-  "cameraready_date" : "to be announced"
-
-  }
+  "cameraready_date" : "to be announced",
+  "submission_link" : "",
+  "overleaf_template_link" : "https://www.overleaf.com/latex/templates/template-for-neural-information-processing-systems-nips-2018/zxpdbfpqgxss",
+  
+  "people" : 
+        { 
+            "Margaux Luck" :        {"img": "img/margaux.jpg",  "affiliation":"Mila"},
+            "Jonnie Penn" :         {"img": "img/jonnie.jpg",   "affiliation":"University of Cambridge"},
+            "Tristan Sylvain" :     {"img": "img/tristan.jpg",  "affiliation":"Mila"},
+            "Mark Crowley" :        {"img": "img/mark.jpg",     "affiliation":"University of Waterloo"},
+            "Joseph Paul Cohen" :   {"img": "img/joseph.jpg",   "affiliation":"Mila"},
+            "Sean McGregor" :       {"img": "img/sean.jpg",     "affiliation":"IBM Watson AI XPRIZE"},
+            "Myriam Côté" :         {"img": "img/myriam.jpg",   "affiliation":"Mila"},
+            "Valentine Goddard" :   {"img": "img/valentine.jpg","affiliation":"AI on a Social Mission"},
+            "Arsene Fansi Tchango" :{"img": "img/arsene.jpg",   "affiliation":"Mila"},
+            "Kenny Chen" :          {"img": "img/kenny.jpg",    "affiliation":"Ascender"},
+            "Yoshua Bengio" :       {"img": "img/yoshua.jpg",   "affiliation":"Mila"},
+            "Taras Kucherenko" : {"img": "img/taras.jpg", "affiliation":"KTH Royal Institute of Technology"},
+            "Abhishek Gupta" : {"img": "img/abhishek.jpg", "affiliation":"MAIEI, Microsoft, and McGill"},
+            "Cody Wild": {"img": "img/cody.jpg", "affiliation":"Sophos Antivirus"},
+            "Aurelie Helouis": {"img": "img/aurelie.jpg", "affiliation":"Mila"},
+            "Samuel Greydanus": {"img": "img/samuel.jpg", "affiliation":"Google AI"},
+            "Arya Farahi": {"img": "img/arya.jpg", "affiliation":"Carnegie Mellon University"},
+            "Timnit Gebru": {"img": "img/timnit.jpg", "affiliation":"Google"},
+            "Rediet Abebe":{"img": "img/rediet.jpg", "affiliation":"Cornell University"},
+            "Tess Berthier":{"img": "img/tess.berthier.jpeg", "affiliation":"Imagia"},
+            "Ernest Mwebaze":{"img": "img/ernest-mwebaze.jpeg", "affiliation":"Google Ghana"}
+        }
+  },
  
+"organizers" : {      
+
+    "chair" : 
+        {
+            "Schedule Chairs" :        ["Margaux Luck", "Jonnie Penn"],
+            "Paper Review Chairs" :    ["Tristan Sylvain","Mark Crowley" ] ,
+            "Call for Paper Chairs" :  ["Joseph Paul Cohen", "Margaux Luck"],
+            "Sponsor Chair" :          ["Sean McGregor"],
+            "Finance Chair" :          ["Myriam Côté"],
+            "Civic Engagement Chair" : ["Valentine Goddard"],
+            "Logistics Chairs" :       ["Arsene Fansi Tchango", "Kenny Chen"],
+            "Website Chair" :          ["Joseph Paul Cohen"],
+            "Science Chair" :          ["Yoshua Bengio"],
+            "Program Committee" :      ["Margaux Luck", "Tristan Sylvain","Joseph Paul Cohen",
+                                       "Valentine Goddard","Mark Crowley","Sean McGregor", "Jonnie Penn", 
+                                       "Arsene Fansi Tchango", "Kenny Chen", "Taras Kucherenko","Abhishek Gupta","Cody Wild",
+                                       "Aurelie Helouis","Samuel Greydanus","Arya Farahi",
+                                       "Myriam Côté", "Yoshua Bengio", "Timnit Gebru","Rediet Abebe"],
+            "Logo design and artwork" : ["Tess Berthier"]
+        }
+    },
+    
+ "schedule" : {
+
+        "schedule_date" : ["Monday May 6th"],
+        
+        "talks" :{
+            "Monday May 6th" : [
+                {"time" : "8:30", "speaker_name": "Yoshua Bengio", "title" : "Opening remarks" },
+                {"time" : "8:45", "speaker_name": "Ernest Mwebaze", "title" : "Invited Talk: AI for agriculture, environmental protection and sustainability"}
+            ]
+        }
+        
+    }
 }
