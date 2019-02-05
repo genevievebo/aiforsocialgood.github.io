@@ -21,7 +21,6 @@ sections.remove("custom.json")
 sections.remove("header")
 sections.remove("footer")
 
-sections = ['schedule']
 for section_name in sections :
 	attributes = custom['default'].copy()
 	attributes.update(custom.get(section_name, {}))
@@ -32,12 +31,12 @@ for section_name in sections :
 	
 	try : 
 		s = section.render(**attributes)
-		outfile = open('../new/%s.html' % section_name, "w")
+		outfile = open('../%s.htm' % section_name, "w")
 		outfile.write(str(s))
 		outfile.close()
 
 	except Exception as e: 
-		print(e)
+		print(section_name, e)
 		
 		ctc = re.findall(reg, open(section_name).read())
 		atr = attributes.keys()

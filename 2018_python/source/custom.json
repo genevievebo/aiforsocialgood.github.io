@@ -14,6 +14,7 @@
   "conference_name" : "International Conference on Learning Representations", 
   "conference_abbr" : "ICLR", 
   "conference_website" : "https://iclr.cc",
+  "conference_city" : "",
   "deadline_date" : "to be announced",
   "deadline_hour" : "", 
   "notification_date" : "to be announced",
